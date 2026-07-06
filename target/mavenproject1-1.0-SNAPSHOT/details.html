@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details - NexusApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --primary: #6366f1;
+            --secondary: #a5b4fc;
+            --card-bg: rgba(30, 41, 59, 0.45);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--bg-color) 0%, #1e1b4b 50%, #311042 100%);
+            min-height: 100vh;
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 3rem;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 100;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--secondary), #e879f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-back {
+            padding: 0.6rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-3px);
+        }
+
+        /* Content */
+        .container {
+            padding: 8rem 3rem 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-box {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .data-placeholder {
+            background: rgba(0,0,0,0.3);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px dashed rgba(255,255,255,0.2);
+            text-align: center;
+            color: var(--secondary);
+            font-family: monospace;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">NexusApp</div>
+        <a href="dashboard.html" class="btn-back">← Back to Dashboard</a>
+    </nav>
+
+    <div class="container">
+        <div class="content-box">
+            <h1>Detailed View</h1>
+            <p>This is the detailed content page. You reached this page by clicking one of the cards on the main dashboard.</p>
+            <p>In a real application, you would load data from the database here based on what the user clicked.</p>
+            
+            <div class="data-placeholder">
+                [ Dynamic Data Will Be Displayed Here ]
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
