@@ -760,10 +760,11 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        // Construct path to image frame
+        // Construct path to image frame (uses mobile/ folder on mobile devices!)
         const getFramePath = index => {
             const paddedIndex = index.toString().padStart(3, '0');
-            return `ezgif-34aab23dbb6fdb1a-jpg/ezgif-frame-${paddedIndex}.jpg`;
+            const folder = window.innerWidth <= 768 ? 'mobile' : 'ezgif-34aab23dbb6fdb1a-jpg';
+            return `${folder}/ezgif-frame-${paddedIndex}.jpg`;
         };
 
         // Draw image cleanly on both Desktop (full width) and Mobile (aspect-ratio preserved without distortion)
